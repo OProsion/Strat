@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+double sw(double n)
+{
+	return 63240 * n;
+}
+int main()
+{
+	cout << "Enter the number of light years:";
+	double years;
+	cin >> years;
+	cout << years << " light year = " << sw(years) << " astronomical units.\n";
+	return 0;
+}
