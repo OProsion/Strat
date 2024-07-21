@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	const float gallon_liter = 3.875;
+	const float km_mile = 62.14;
+	double eur_fuel_con, us_fecl_con;
+	cout << "输入欧式油耗: __ L/100KM\n";
+	cin >> eur_fuel_con;
+	us_fecl_con = 1 / (eur_fuel_con  / km_mile / gallon_liter);
+	cout << "美式油耗是 " << us_fecl_con<< " mile/gas.\n";
+	return 0;
+}
