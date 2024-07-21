@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	double mileage, gasoline,km_mileage,l_gasoline;
+	cout << "输入驱车里程（英里）：";
+	cin >> mileage;
+	cout << "输入使用汽油量（加仑）：";
+	cin >> gasoline;
+	cout << "美式油耗是 " << mileage / gasoline << "mpg";
+	cout << "输入驱车里程（千米）：";
+	cin >> km_mileage;
+	cout << "输入使用汽油量（升）：";
+	cin >> l_gasoline;
+	cout << "欧式油耗是 " << l_gasoline / km_mileage * 100 << "L/100KM.\n";
+	return 0;
+}
