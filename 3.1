@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	const int conversion = 12;
+	cout << "请输入您的身高（英寸）__\b\b";
+	int heights;
+	cin >> heights;
+	cout << "您的身高是 " << int(heights/conversion) << " 英尺，"<< int(heights%conversion) <<"英寸。\n";
+	return 0;
+}
