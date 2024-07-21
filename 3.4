@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int day_hour = 24, hour_minute = 60, minute_second = 60;
+    const long day_seconds = day_hour * hour_minute * minute_second; // 一天有多少秒
+    const long hour_seconds = hour_minute * minute_second; // 一小时有多少秒
+
+    int day, hour, minute, second;
+    long seconds;
+    cout << "Enter the number of seconds:";
+    cin >> seconds;
+
+    // 计算天数
+    day = seconds / day_seconds;
+    // 计算剩余秒数（去掉天数的秒数）
+    seconds %= day_seconds;
+    // 计算小时数
+    hour = seconds / hour_seconds;
+    // 计算剩余秒数（去掉小时数的秒数）
+    seconds %= hour_seconds;
+    // 计算分钟数
+    minute = seconds / minute_second;
+    // 计算秒数
+    second = seconds % minute_second;
+
+    cout << seconds << " = " << day << " days, " << hour << " hours, " << minute << " minutes, " << second << " seconds.\n";
+    return 0;
+}
