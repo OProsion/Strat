@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int foot_to_inch = 12;
+    const double inch_to_meter = 0.0254;
+    const double pound_to_kilogram = 2.2; // 磅到千克的转换系数
+
+    cout << "请输入您的身高_（英尺）_（英寸）\n";
+    int hfoot, hinch;
+    cin >> hfoot;
+    cin >> hinch;
+
+    cout << "请输入您的体重（磅）\n";
+    double weight_pound, height, weight, BMI;
+    cin >> weight_pound;
+
+    // 计算身高（米）
+    height = (hfoot * foot_to_inch + hinch) * inch_to_meter;
+
+    // 将体重从磅转换为千克
+    weight = weight_pound / pound_to_kilogram;
+
+    // 计算BMI
+    BMI = weight / (height * height);
+
+    cout << "您的BMI是 " << BMI << endl;
+
+    return 0;
+}
